@@ -133,3 +133,12 @@
 | 14      | 1110    | 16    | E           |
 | 15      | 1111    | 17    | F           |
 | 16      | `10000` | 20    | `10`        |
+# Binary Coded Decimal (BCD)
+- O BCD é uma outra forma de representar números decimais em binário.
+- Nela, cada dígito decimal é representado por um número binário de 4 bits. 
+  - A conversão utiliza a mesma lógica da conversão entre hexadecimal e binário.
+  
+- Vantagem: Facilidade de conversão entre decimal e binário.
+- Desvantagem: Ineficiência de espaço, pois cada dígito decimal é representado por 4 bits. Existem 16 combinações possíveis, mas apenas 10 são utilizadas.
+  - $730_{10}$ em BCD é 0111 0011 0000
+  - 0001 0010 0011 em BCD é $123_{10}$
