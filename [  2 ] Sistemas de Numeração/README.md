@@ -66,3 +66,70 @@
 - A palavra $FACE_{16}$ é um exemplo de número hexadecimal. Ele representa o número abaixo em base 10:
   - $15 * 16^3 + 10 * 16^2 + 12 * 16^1 + 14 * 16^0 = 15 * 4096 + 10 * 256 + 12 * 16 + 14 = 64206_{10}$
 
+# Conversão entre Bases:
+- Para converter qualquer número de uma base b para a base 10, podemos utilizar a definição de base genérica.
+  - $\sum_{i=0}^{n} A_i * b^i$
+  - $A_i$ é o i-ésimo dígito do número e n é o número de dígitos.
+    - $A_n * b^n + A_{n-1} * b^{n-1} + ... + A_1 * b^1 + A_0 * b^0$
+- Para converter um número de base 10 para uma base b, utilizamos o método das divisões sucessivas.
+  - Dividimos o número por b e guardamos o resto da divisão.
+  - O resto da divisão é o dígito menos significativo.
+  - Dividimos o resultado da divisão inteira por b e guardamos o resto da divisão.
+  - Repetimos o processo até que o resultado da divisão inteira seja 0.
+  - O número convertido é formado pelos restos das divisões, do último para o primeiro.
+  - Por exemplo, para converter o número 123 para binário:
+    - $123 / 2 = 61$ resto 1
+    - $61 / 2 = 30$ resto 1
+    - $30 / 2 = 15$ resto 0
+    - $15 / 2 = 7$ resto 1
+    - $7 / 2 = 3$ resto 1
+    - $3 / 2 = 1$ resto 1
+    - $1 / 2 = 0$ resto 1
+    - Logo, $123_{10} = 1111011_2$
+- Conversões entre bases diferentes de 10 podem ser feitas utilizando a base 10 como intermediária.
+  - Por exemplo, para converter o número $123_8$ para binário:
+    - $123_8 = 1 * 8^2 + 2 * 8^1 + 3 * 8^0 = 64 + 16 + 3 = 83_{10}$
+    - $83_{10} = 1010011_2$
+    - Logo, $123_8 = 1010011_2$
+  - Nesse caso em específico, a conversão pode ser feita diretamente, pois 8 é uma potência de 2.
+    - Podemos fazer isso convertendo blocos de 1 dígito octal para 3 dígitos binários (pois $2^3 = 8$).
+-   | Octal | Binário |
+    | --- | ----- |
+    | 0   | 000   |
+    | 1   | 001   |
+    | 2   | 010   |
+    | 3   | 011   |
+    | 4   | 100   |
+    | 5   | 101   |
+    | 6   | 110   |
+    | 7   | 111   |
+    - Basta substituir cada dígito octal pelo seu equivalente em binário (sempre com 3 dígitos, mesmo que contenha zeros a esquerda).
+    - $1 = 001, 2 = 010, 3 = 011$ então $123_8 = 001010011_2 = 1010011_2$
+  - O mesmo pode ser feito para converter de hexadecimal para binário, pois 16 é uma potência de 2.
+    - Nesse caso, cada dígito hexadecimal é substituído por 4 dígitos binários. Muito cuidado para não esquecer de manter os zeros a esquerda.
+  - Um uso muito comum para esses sistemas de numeração é justamente esse, condensar números binários (facilitando a leitura) de forma rápida.
+
+# Contagem em Sistemas de Numeração Posicional:
+- Como fazemos para contar em decimal? 
+  - Utilizamos os dígitos de 0 a 9 e, quando chegamos no 9, voltamos para 0 e incrementamos o dígito à esquerda.
+- Podemos utilizar a mesma lógica para contar em qualquer base. Contamos de 0 até b-1 e, quando chegamos no b-1, voltamos para 0 e incrementamos o dígito à esquerda.
+
+| Decimal | Binário | Octal | Hexadecimal |
+| ------- | ------- | ----- | ----------- |
+| 0       | 0       | 0     | 0           |
+| 1       | 1       | 1     | 1           |
+| 2       | `10`    | 2     | 2           |
+| 3       | 11      | 3     | 3           |
+| 4       | `100`   | 4     | 4           |
+| 5       | 101     | 5     | 5           |
+| 6       | 110     | 6     | 6           |
+| 7       | 111     | 7     | 7           |
+| 8       | `1000`  | `10`  | 8           |
+| 9       | 1001    | 11    | 9           |
+| `10`    | 1010    | 12    | A           |
+| 11      | 1011    | 13    | B           |
+| 12      | 1100    | 14    | C           |
+| 13      | 1101    | 15    | D           |
+| 14      | 1110    | 16    | E           |
+| 15      | 1111    | 17    | F           |
+| 16      | `10000` | 20    | `10`        |
