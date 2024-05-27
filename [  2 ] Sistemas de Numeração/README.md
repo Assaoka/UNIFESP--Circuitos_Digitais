@@ -1,3 +1,8 @@
+<h1 align="center"> 🧮 Sistemas de Numeração 🧮 <br>
+  <a href="../[  1 ] Sinais Analógicos x Sinais Digitais/"><img src="https://img.shields.io/badge/Anterior-Sinais Analógicos x Sinais Digitais-215a36" alt="Anterior"></a>
+  <a href="../[  3 ] Descrição de Circuitos Lógicos/"><img src="https://img.shields.io/badge/Próximo-Descrição de Circuitos Lógicos-215a36" alt="Próximo"></a>
+</h1>
+
 # O que é um Sistema de Numeração?
 - Um sistema de numeração é um conjunto de símbolos e regras que permitem representar quantidades de forma consistente.
 - Contar é uma atividade que faz parte do nosso dia a dia, desde a antiguidade o homem sentiu a necessidade de contar. Isso levou à criação de sistemas de numeração por diversas civilizações.
@@ -133,6 +138,11 @@
 | 14      | 1110    | 16    | E           |
 | 15      | 1111    | 17    | F           |
 | 16      | `10000` | 20    | `10`        |
+
+
+
+
+
 # Binary Coded Decimal (BCD)
 - O BCD é uma outra forma de representar números decimais em binário.
 - Nela, cada dígito decimal é representado por um número binário de 4 bits. 
@@ -142,3 +152,10 @@
 - Desvantagem: Ineficiência de espaço, pois cada dígito decimal é representado por 4 bits. Existem 16 combinações possíveis, mas apenas 10 são utilizadas.
   - $730_{10}$ em BCD é 0111 0011 0000
   - 0001 0010 0011 em BCD é $123_{10}$
+
+---
+
+<p align="center">
+    <a href="../[  1 ] Sinais Analógicos x Sinais Digitais/"><img src="https://img.shields.io/badge/Anterior-Sinais Analógicos x Sinais Digitais-215a36" alt="Anterior"></a>
+    <a href="../[  3 ] Descrição de Circuitos Lógicos/"><img src="https://img.shields.io/badge/Próximo-Descrição de Circuitos Lógicos-215a36" alt="Próximo"></a>
+</p>
