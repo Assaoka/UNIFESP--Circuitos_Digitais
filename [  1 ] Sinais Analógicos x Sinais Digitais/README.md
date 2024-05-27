@@ -31,3 +31,8 @@
   - Quanto maior a frequência de amostragem, mais fiel será a representação digital do sinal analógico. 
 
 ---
+
+<p align="center">
+  <a href="../"><img src="https://img.shields.io/badge/Anterior-Home-215a36" alt="Anterior"></a>
+  <a href="../[  2 ] Sistemas de Numeração/"><img src="https://img.shields.io/badge/Próximo-Sistemas_de_Numeração-215a36" alt="Próximo"></a> 
+</p>
